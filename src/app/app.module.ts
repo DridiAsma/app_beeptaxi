@@ -8,11 +8,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LayoutsModule } from './layouts/layouts.module';
 import { CommandeComponent } from './views/clients/commande/commande.component';
+import { MapComponent } from './views/chauffeurs/map/map.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CommandeComponent
+    CommandeComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
@@ -29,11 +32,11 @@ import { CommandeComponent } from './views/clients/commande/commande.component';
   // AgmDirectionModule,
   // GoogleMapsModule,
   // GooglePlaceModule,
-  //  ToastrModule.forRoot({
-  //   timeOut: 5000,
-  //   positionClass: 'toast-top-right',
-  //   preventDuplicates: true,
-  // }
+   ToastrModule.forRoot({
+    timeOut: 5000,
+    positionClass: 'toast-top-right',
+    preventDuplicates: true,
+  }),
   ],
   providers: [],
   bootstrap: [AppComponent],
