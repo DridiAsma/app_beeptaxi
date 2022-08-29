@@ -10,12 +10,14 @@ import { LayoutsModule } from './layouts/layouts.module';
 import { CommandeComponent } from './views/clients/commande/commande.component';
 import { MapComponent } from './views/chauffeurs/map/map.component';
 import { ToastrModule } from 'ngx-toastr';
+import { AddblogComponent } from './views/admin/addblog/addblog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CommandeComponent,
-    MapComponent
+    MapComponent,
+    AddblogComponent
   ],
   imports: [
     BrowserModule,
