@@ -4,12 +4,6 @@
   box-sizing: inherit;
 }
 
-body,
-html {
-  height: 100%;
-  font-family: Poppins-Regular, sans-serif;
-}
-
 a {
   font-family: Poppins-Regular;
   font-size: 14px;
@@ -211,11 +205,6 @@ iframe {
   }
 }
 
-
-/*[ PADDING ]
-///////////////////////////////////////////////////////////
-*/
-
 .p-t-115 {
   padding-top: 50px;
 }
@@ -235,7 +224,7 @@ iframe {
 }
 
 .lert {
-  /*display: none;*/
+
   width: 100%;
   margin-top: .25rem;
   font-size: 80%;
@@ -377,4 +366,3 @@ html {
 }
 
 
-/* GENERAL STYLING OF PAGE — NOT APPLICABLE TO EXAMPLE */
