@@ -14,8 +14,6 @@ import { Blog } from './blog.model';
 export class AddblogComponent implements OnInit {
 
 
-
-
  files: any;
  formblogs!: FormGroup;
  blog = new Blog;

@@ -139,14 +139,12 @@ export class CommandeComponent implements OnInit {
         this.dr.setDirections(response);
  //cette fonction pour le time
 
-    //  this.ngZone.run(() =>{
-    //    let distanceInfo = response.routes[0].legs[0];
-    //     this.distance = distanceInfo.distance.text;
-    //     this.time = distanceInfo.duration.text;
-
-    //   }
-    //   );
-     }
+     this.ngZone.run(() =>{
+       let distanceInfo = response!.routes[0].legs[0];
+        this.distance = distanceInfo.distance!.text;
+        this.time = distanceInfo.duration!.text;
+      }
+      ); }
     })
   }
 
@@ -218,9 +216,9 @@ export class CommandeComponent implements OnInit {
    type_vehicules: new FormControl('taxi'),
    types_paiment: new FormControl('',[Validators.required]),
    nbr_persone: new FormControl('',[Validators.required]),
-   texts: new FormControl('',[Validators.required]),
+   texts: new FormControl(''),
    prixclient: new FormControl('',[Validators.required]),
-   codepromo: new FormControl('',[Validators.required]),
+   codepromo: new FormControl(''),
    statut: new FormControl('',[Validators.required]),
    duree: new FormControl('',[Validators.required]),
   })
@@ -240,7 +238,7 @@ export class CommandeComponent implements OnInit {
        (errorRes : HttpErrorResponse) =>{
         this.toastr.error("Something went wrong", "Error");
        },()=> {
-       this.toastr.info("Completed l'information", "on Completion");
+       this.toastr.info("Informations complétées", "En complément");
       //  this.spinner.hide();
        },
 
@@ -248,7 +246,7 @@ export class CommandeComponent implements OnInit {
   }
  }
  onSaveClient(){
-  this.toastr.success("Saved successfully", "Success");
+  this.toastr.success("Enregistré avec succès", "Success");
   this.form.reset();
  }
 

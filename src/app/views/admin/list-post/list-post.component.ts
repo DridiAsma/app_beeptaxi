@@ -24,10 +24,11 @@ export class ListPostComponent implements OnInit {
 
   //import liste
   getBlog(){
-    this.dataServ.indexBlog().subscribe(response=>{
-      console.log(response)
+    this.dataServ.indexBlog().subscribe(response=> {
       this.blogs=response;
+      console.log(response)
     });
+
   }
 
   //supprimer
@@ -45,7 +46,7 @@ export class ListPostComponent implements OnInit {
  }
 
 
- 
+
 
 
 

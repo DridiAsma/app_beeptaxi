@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+// import { CommonModule } from '@angular/common';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -16,7 +16,22 @@ import { GooglePlaceModule } from 'ngx-google-places-autocomplete';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { TypevehicleComponent } from './views/admin/typevehicle/typevehicle.component';
 import { AllclientComponent } from './views/admin/allclient/allclient.component';
+import { AlertadminComponent } from './views/admin/alertadmin/alertadmin.component';
+import { BlogComponent } from './views/front/blog/blog.component';
 
+
+import { ListPostComponent } from './views/admin/list-post/list-post.component';
+import { MapadminComponent } from './views/admin/mapadmin/mapadmin.component';
+import { DetailleclientComponent } from './views/admin/detailleclient/detailleclient.component';
+import { NoteStarComponent } from './views/admin/note-star/note-star.component';
+import { CodepromoComponent } from './views/admin/codepromo/codepromo.component';
+import { ProfileComponent } from './views/admin/profile/profile.component';
+import { ContactComponent } from './views/front/contact/contact.component';
+import { ReservationComponent } from './views/front/reservation/reservation.component';
+import { ListeContactComponent } from './views/admin/liste-contact/liste-contact.component';
+import { ListTypevehiculeComponent } from './views/admin/list-typevehicule/list-typevehicule.component';
+import { ListerequeteChauffeurComponent } from './views/admin/listerequete-chauffeur/listerequete-chauffeur.component';
+import { ListerequeteClientComponent } from './views/admin/listerequete-client/listerequete-client.component';
 
 @NgModule({
   declarations: [
@@ -27,13 +42,35 @@ import { AllclientComponent } from './views/admin/allclient/allclient.component'
     AllchauffeurComponent,
     TypevehicleComponent,
     AllclientComponent,
+    AlertadminComponent,
+
+    AppComponent,
+   
+    TypevehicleComponent,
+    ProfileComponent,
+    
+    NoteStarComponent,
+    DetailleclientComponent,
+    MapComponent,
+    MapadminComponent,
+    CommandeComponent,
+    
+    ReservationComponent,
+    ListeContactComponent,
+    ListerequeteClientComponent,
+    ListerequeteChauffeurComponent,
+    BlogComponent,
+  
+    AddblogComponent,
+    ListPostComponent,
+    ListTypevehiculeComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    CommonModule,
+    // CommonModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
