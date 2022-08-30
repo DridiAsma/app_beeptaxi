@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { AuthclientService } from 'src/app/views/services/authclient.service';
 
 @Component({
   selector: 'app-login-layout',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginLayoutComponent implements OnInit {
 
-  constructor() { }
+  messageAuthError: any
+  datatoken:any
+
+  constructor(private clientservice:AuthclientService, private route:Router, private arouter:ActivatedRoute) { }
 
   ngOnInit(): void {
+  }
+
+  loginclient(f:any){
+    let data=f.value
+     this.clientservice.login(data).subscribe(data=>{
+      this.datatoken= data
+      this.clientservice.saveToken(this.datatoken.token)
+      this.route.navigate(['/client/commande'])
+   } )
+
   }
 
 }

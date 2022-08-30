@@ -11,9 +11,7 @@ describe('AllchauffeurComponent', () => {
       declarations: [ AllchauffeurComponent ]
     })
     .compileComponents();
-  });
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(AllchauffeurComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

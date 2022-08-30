@@ -1,5 +1,5 @@
 export class Types {
-    libelle:any;
-    montant:any;
-    image:any;
+  libelle:any;
+  montant:any;
+  image:any;
 }

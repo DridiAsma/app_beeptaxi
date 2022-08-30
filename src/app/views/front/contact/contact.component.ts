@@ -14,21 +14,17 @@ export class ContactComponent implements OnInit {
   }
 
 
-  // ajouterContact(f:any){
+  ajouterContact(f:any){
 
-  //   let data=f.value
-  //   this.ajcontact.ajouteContact(data).subscribe(
-  //     data=>
-  //     {
+    let data=f.value
+    this.ajcontact.ajouteContact(data).subscribe(
+      data=>
+      {
 
-  //       //this.route.navigate(['/chauffeur/login'])
-  //       console.log(data)
-  //     },
-  //     // (err:HttpErrorResponse)=>{
-  //     //   console.log(err)
-  //     //   this.messageError="l'authentification a échoué, veuillez vérifier vos informations"
-  //     // }
-  //     )
-  // }
+        console.log(data)
+      },
+
+      )
+  }
 
 }

@@ -1,4 +1,4 @@
-<!-- 
+
 
 
 <div class="container">
@@ -37,7 +37,7 @@
 
           <div class="col-lg-8 mt-5 mt-lg-0" data-aos="fade-left" data-aos-delay="200">
 
-            <form #f="ngForm" (ngSubmit)="ajouterContact(f)">
+            <form (ngSubmit)="ajouterContact(f)" #f="ngForm">
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="nompre" class="form-control"  placeholder="Nom & Prenom" required  ngModel>
@@ -72,4 +72,4 @@
     </a>
 
   </footer>
-</div> -->
+</div>

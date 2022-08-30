@@ -1,10 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { TypesService } from '../../services/types.service';
-import {UntypedFormGroup, Validators, UntypedFormBuilder} from '@angular/forms';
-
 import { Types } from './types.model';
-
-
 
 @Component({
   selector: 'app-typevehicle',
@@ -12,21 +9,22 @@ import { Types } from './types.model';
   styleUrls: ['./typevehicle.component.css']
 })
 export class TypevehicleComponent implements OnInit {
- types = new Types; //import les fichier model 
+
+  types = new Types; //import les fichier model
   files: any; // for image
   typeVoiture: any;
-  form!: UntypedFormGroup; // form de reactive
+  form!: FormGroup; // form de reactive
   submitted= false; //pour validation les champs
   data: any;
   toastr: any;
 
-  
 
-  
+
+
 
   constructor(
     private datatypes:TypesService,
-    private formBuilder: UntypedFormBuilder,
+    private formBuilder: FormBuilder,
    ){ }
 
   ngOnInit(): void {
@@ -85,4 +83,5 @@ export class TypevehicleComponent implements OnInit {
      this.getListetype();
    })
  }
+
 }

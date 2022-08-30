@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NgForm } from '@angular/forms';
 import { ContactRoutingModule } from './contact-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ContactComponent } from './contact.component';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+ ContactComponent
+  ],
   imports: [
     CommonModule,
     FormsModule,

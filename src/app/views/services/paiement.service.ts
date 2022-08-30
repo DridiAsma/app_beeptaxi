@@ -46,7 +46,7 @@ export class PaiementService {
     return this.http.delete('http://127.0.0.1:8000/api/blog/delete/'+id);
    }
 
-   //modifier les donnes 
+   //modifier les donnes
    modifierblog(id: number, data: any){
     return this.http.put('http://127.0.0.1:8000/api/blog/update/'+id,data);
    }

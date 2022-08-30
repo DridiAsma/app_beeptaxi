@@ -11,9 +11,7 @@ describe('CodepromoComponent', () => {
       declarations: [ CodepromoComponent ]
     })
     .compileComponents();
-  });
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(CodepromoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

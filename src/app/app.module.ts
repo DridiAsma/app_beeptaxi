@@ -11,13 +11,21 @@ import { CommandeComponent } from './views/clients/commande/commande.component';
 import { MapComponent } from './views/chauffeurs/map/map.component';
 import { ToastrModule } from 'ngx-toastr';
 import { AddblogComponent } from './views/admin/addblog/addblog.component';
+import { AllchauffeurComponent } from './views/admin/allchauffeur/allchauffeur.component';
+import { GooglePlaceModule } from 'ngx-google-places-autocomplete';
+import { GoogleMapsModule } from '@angular/google-maps';
+import { TypevehicleComponent } from './views/admin/typevehicle/typevehicle.component';
+import { AllclientComponent } from './views/admin/allclient/allclient.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CommandeComponent,
     MapComponent,
-    AddblogComponent
+    AddblogComponent,
+    AllchauffeurComponent,
+    TypevehicleComponent,
+    AllclientComponent
   ],
   imports: [
     BrowserModule,
@@ -31,9 +39,9 @@ import { AddblogComponent } from './views/admin/addblog/addblog.component';
   //   AgmCoreModule.forRoot({apiKey:'AIzaSyCNMgSJml7Zm1_mgLT2Fgw4_vSjGt6hwvs',
   //   libraries: ['places', 'drawing', 'geometry'],
   //  }),
-  // AgmDirectionModule,
-  // GoogleMapsModule,
-  // GooglePlaceModule,
+   //AgmDirectionModule,
+   GoogleMapsModule,
+   GooglePlaceModule,
    ToastrModule.forRoot({
     timeOut: 5000,
     positionClass: 'toast-top-right',

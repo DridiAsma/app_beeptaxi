@@ -1,9 +1,8 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ToastrService} from 'ngx-toastr';
+import { ToastrService } from 'ngx-toastr';
 import { CodedataService } from '../../services/codedata.service';
-import { Codes } from './codes.model';
 
 @Component({
   selector: 'app-codepromo',
@@ -11,6 +10,7 @@ import { Codes } from './codes.model';
   styleUrls: ['./codepromo.component.css']
 })
 export class CodepromoComponent implements OnInit {
+
   messageErr!: "";
 
   constructor(private datacode:CodedataService,
@@ -28,7 +28,7 @@ export class CodepromoComponent implements OnInit {
        //console.log(res)
        this.toastr.success( 'Validation Faite avec Success');
        this.route.navigate(['/admin/allcodepromo'])
-      
+
       },
       (err:HttpErrorResponse)=>{
         this.messageErr=err.error

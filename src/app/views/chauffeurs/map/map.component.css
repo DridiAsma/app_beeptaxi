@@ -30,7 +30,7 @@
   background-size: cover;
   width: 130px;
   height: 130px;
-} 
+}
 
 .map-pill {
   background: #fff;
@@ -163,4 +163,4 @@ input[type=text]::placeholder {
 .map-places-search-visible {
   padding-top: 44px !important;
   opacity: 1 !important;
-} 
+}

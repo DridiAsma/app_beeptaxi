@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { PaiementRoutingModule } from './paiement-routing.module';
+import { RegisterChauffRoutingModule } from './register-chauff-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
@@ -9,9 +9,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   declarations: [],
   imports: [
     CommonModule,
-    PaiementRoutingModule,
+    RegisterChauffRoutingModule,
     FormsModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule
   ]
 })
-export class PaiementModule { }
+export class RegisterChauffModule { }
