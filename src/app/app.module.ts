@@ -16,7 +16,7 @@ import { GooglePlaceModule } from 'ngx-google-places-autocomplete';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { TypevehicleComponent } from './views/admin/typevehicle/typevehicle.component';
 import { AllclientComponent } from './views/admin/allclient/allclient.component';
-import { NotificationComponent } from './views/admin/notification/notification.component';
+
 
 @NgModule({
   declarations: [
@@ -27,7 +27,7 @@ import { NotificationComponent } from './views/admin/notification/notification.c
     AllchauffeurComponent,
     TypevehicleComponent,
     AllclientComponent,
-    NotificationComponent
+
   ],
   imports: [
     BrowserModule,
