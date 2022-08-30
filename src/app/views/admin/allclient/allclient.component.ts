@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-allclient',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AllclientComponent implements OnInit {
 
-  constructor() { }
+  public clients:any
+
+  constructor(private ds:DataService, private route:Router) { }
 
   ngOnInit(): void {
+    this.getClientData();
   }
 
+  getClientData(){
+    this.ds.getAllclient().subscribe((response:any)=>{
+      console.log(response.data)
+      this.clients=response.data;
+    });
+  }
+
+  details(id:any){
+    this.route.navigate(['/admin/detailleclient/'+id]);
+  }
 }
