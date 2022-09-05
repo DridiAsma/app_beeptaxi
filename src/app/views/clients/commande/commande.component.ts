@@ -143,6 +143,7 @@ export class CommandeComponent implements OnInit {
        let distanceInfo = response!.routes[0].legs[0];
         this.distance = distanceInfo.distance!.text;
         this.time = distanceInfo.duration!.text;
+
       }
       ); }
     })
