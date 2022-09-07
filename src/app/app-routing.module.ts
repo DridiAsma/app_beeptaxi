@@ -19,6 +19,7 @@ const routes: Routes = [
   children:[
     {path:'', loadChildren:()=>import('./views/front/home/home.module').then(m=>m.HomeModule)},
     {path:'blog', loadChildren:()=>import('./views/front/blog/blog.module').then(m=>m.BlogModule)},
+    {path:'notifi', loadChildren:()=>import('./views/front/notifi/notifi.module').then(m=>m.NotifiModule)},
     {path:'contact', loadChildren:()=>import('./views/front/contact/contact.module').then(m=>m.ContactModule)},
     {path:'reservation', loadChildren:()=>import('./views/front/reservation/reservation.module').then(m=>m.ReservationModule)},
   ]

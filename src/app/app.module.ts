@@ -33,6 +33,14 @@ import { ListTypevehiculeComponent } from './views/admin/list-typevehicule/list-
 import { ListerequeteChauffeurComponent } from './views/admin/listerequete-chauffeur/listerequete-chauffeur.component';
 import { ListerequeteClientComponent } from './views/admin/listerequete-client/listerequete-client.component';
 
+import { AngularFireModule } from '@angular/fire/compat';
+
+
+import { NotifiComponent } from './views/front/notifi/notifi.component';
+import { AngularFireMessagingModule } from '@angular/fire/compat/messaging';
+import { AngularFireDatabaseModule } from"@angular/fire/compat/database";
+import { AngularFireAuthModule } from "@angular/fire/compat/auth";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,27 +51,23 @@ import { ListerequeteClientComponent } from './views/admin/listerequete-client/l
     TypevehicleComponent,
     AllclientComponent,
     AlertadminComponent,
-
     AppComponent,
-   
     TypevehicleComponent,
     ProfileComponent,
-    
     NoteStarComponent,
     DetailleclientComponent,
     MapComponent,
     MapadminComponent,
     CommandeComponent,
-    
     ReservationComponent,
     ListeContactComponent,
     ListerequeteClientComponent,
     ListerequeteChauffeurComponent,
     BlogComponent,
-  
     AddblogComponent,
     ListPostComponent,
     ListTypevehiculeComponent,
+    NotifiComponent,
 
   ],
   imports: [
@@ -81,14 +85,20 @@ import { ListerequeteClientComponent } from './views/admin/listerequete-client/l
    //AgmDirectionModule,
    GoogleMapsModule,
    GooglePlaceModule,
-   ToastrModule.forRoot({
-    timeOut: 5000,
+   ToastrModule.forRoot({timeOut: 5000,
     positionClass: 'toast-top-right',
-    preventDuplicates: true,
-  }),
+    preventDuplicates: true,}),
+  
+   AngularFireMessagingModule,
+   AngularFireDatabaseModule,
+   AngularFireAuthModule,
+   AngularFireMessagingModule
+
+
   ],
   providers: [],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
+
 })
 export class AppModule { }
