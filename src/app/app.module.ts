@@ -34,12 +34,13 @@ import { ListerequeteChauffeurComponent } from './views/admin/listerequete-chauf
 import { ListerequeteClientComponent } from './views/admin/listerequete-client/listerequete-client.component';
 
 import { AngularFireModule } from '@angular/fire/compat';
-
-
 import { NotifiComponent } from './views/front/notifi/notifi.component';
 import { AngularFireMessagingModule } from '@angular/fire/compat/messaging';
 import { AngularFireDatabaseModule } from"@angular/fire/compat/database";
 import { AngularFireAuthModule } from "@angular/fire/compat/auth";
+import { MessagingService } from './views/services/messaging.service';
+import { AsyncPipe } from '@angular/common';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -85,18 +86,14 @@ import { AngularFireAuthModule } from "@angular/fire/compat/auth";
    //AgmDirectionModule,
    GoogleMapsModule,
    GooglePlaceModule,
-   ToastrModule.forRoot({timeOut: 5000,
-    positionClass: 'toast-top-right',
-    preventDuplicates: true,}),
-  
-   AngularFireMessagingModule,
-   AngularFireDatabaseModule,
-   AngularFireAuthModule,
-   AngularFireMessagingModule
+   ToastrModule.forRoot({timeOut: 5000, positionClass: 'toast-top-right', preventDuplicates: true,}),
+   AngularFireModule.initializeApp(environment.firebase)
+   
+
 
 
   ],
-  providers: [],
+  providers: [AsyncPipe, MessagingService],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 

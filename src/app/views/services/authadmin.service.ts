@@ -26,6 +26,7 @@ export class AuthadminService {
 
   getname(){
     let access_token:any=localStorage.getItem('access_token')
+
     let decodeToken= this.helper.decodeToken(access_token)
     return decodeToken.name
   }

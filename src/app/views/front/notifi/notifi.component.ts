@@ -1,17 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
-import { environment } from 'src/environments/environment';
 import { AngularFireMessaging } from '@angular/fire/compat/messaging';
-import { mergeMapTo } from 'rxjs/operators';
+import { MessagingService } from '../../services/messaging.service';
 
 @Component({
   selector: 'app-notifi',
-  templateUrl: './notifi.component.html' ,
+  templateUrl: './notifi.component.html',
   styleUrls: ['./notifi.component.css']
 })
-export class NotifiComponent implements OnInit {
+ export class NotifiComponent implements OnInit {
 
-  constructor(private afMessaging: AngularFireMessaging) { }
+  show: any;
+
+ constructor(private messagingService: MessagingService) { }
 
   // requestPermission() {
   //   this.afMessaging.requestPermission
@@ -22,28 +22,31 @@ export class NotifiComponent implements OnInit {
   //       (error) => { console.error(error); },
   //     );
   // }
-// constructor(private afMessaging: AngularFireMessaging) { }
+
+
 
   ngOnInit(): void {
-    this.requestPermission();
+    this.messagingService.requestPermission();
+    this.messagingService.receiveMessage();
+    this.show = this.messagingService.currentMessage
+
+  //   this.listen();
   }
 
- requestPermission() {
-  this.afMessaging.requestToken
-  .subscribe(
-    (token) => {
-      console.log("Permission gratend");
-      console.log(token);
-    },
-
-  (error) => { console.error(error);}
-  ); }
+  // requestPermission() {
+  //   this.angularFireMessaging.requestToken.subscribe(
+  //     (token: any) => {
+  //       console.log(token);
+  //     });
+  // }
 
 
+//  listen(){
+// this.afMessaging.messages.subscribe((message: any) =>
+// {
+//   console.log(message);
+// });
+//  }
+ }
 
 
-
-//  listen(){}
-
-
-}

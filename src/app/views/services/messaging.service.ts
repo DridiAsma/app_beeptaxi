@@ -1,37 +1,38 @@
-// import { Injectable } from '@angular/core';
-// // import { AngularFireMessaging } from '@angular/fire/messaging';
-// import { AngularFireMessaging } from '@angular/fire/compat/messaging';
-// import { BehaviorSubject } from 'rxjs';
+import { Injectable } from '@angular/core';
+// import { AngularFireMessaging } from '@angular/fire/messaging';
+import { AngularFireMessaging } from '@angular/fire/compat/messaging';
 
-// @Injectable()
-// export class MessagingService {
+import { BehaviorSubject } from 'rxjs';
 
-//   currentMessage = new BehaviorSubject(null);
-//   constructor(private angularFireMessaging: AngularFireMessaging) {
-//     // this.angularFireMessaging.messaging.subscribe(
-//     //   (_messaging: any) => {
-//     //     _messaging.onMessage = _messaging.onMessage.bind(_messaging);
-//     //     _messaging.onTokenRefresh = _messaging.onTokenRefresh.bind(_messaging);
-//     //   }
-//     // )
-//   }
+@Injectable()
+export class MessagingService {
 
-//   requestPermission() {
-//     this.angularFireMessaging.requestToken.subscribe(
-//       (token: any) => {
-//         console.log(token);
-//       },
-//       (err: any) => {
-//         console.log('Unable to get permission to notify.', err);
-//       }
-//     );
-//   }
+  currentMessage = new BehaviorSubject(null);
 
-//   receiveMessage() {
-//     this.angularFireMessaging.messages.subscribe(
-//       (payload: any) => {
-//         console.log("new message received. ", payload);
-//         this.currentMessage.next(payload);
-//       })
-//   }
-// }
+  constructor(private angularFireMessaging: AngularFireMessaging) {
+
+    this.angularFireMessaging.messages.subscribe(
+      (_messaging: any) => {
+        _messaging.onMessage = _messaging.onMessage.bind(_messaging);
+        _messaging.onTokenRefresh = _messaging.onTokenRefresh.bind(_messaging);
+      }
+    )
+  }
+
+  requestPermission() {
+    this.angularFireMessaging.requestToken.subscribe(
+      (token: any) => {
+        console.log(token);
+        console.log("bonjour à tous");
+
+      });
+  }
+
+  receiveMessage() {
+    this.angularFireMessaging.messages.subscribe(
+      (payload: any) => {
+        console.log("new message received!", payload);
+        this.currentMessage.next(payload);
+      })
+  }
+}
