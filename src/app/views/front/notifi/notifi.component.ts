@@ -10,6 +10,8 @@ import { MessagingService } from '../../services/messaging.service';
  export class NotifiComponent implements OnInit {
 
   show: any;
+  async: any;
+  json: any;
 
  constructor(private messagingService: MessagingService) { }
 
@@ -40,13 +42,6 @@ import { MessagingService } from '../../services/messaging.service';
   //     });
   // }
 
-
-//  listen(){
-// this.afMessaging.messages.subscribe((message: any) =>
-// {
-//   console.log(message);
-// });
-//  }
  }
 
 

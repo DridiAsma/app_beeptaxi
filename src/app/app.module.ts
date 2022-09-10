@@ -41,6 +41,12 @@ import { AngularFireAuthModule } from "@angular/fire/compat/auth";
 import { MessagingService } from './views/services/messaging.service';
 import { AsyncPipe } from '@angular/common';
 import { environment } from 'src/environments/environment';
+import { UpdateProfileAdminComponent } from './views/admin/update-profile-admin/update-profile-admin.component';
+import { UpdteProfileClientComponent } from './views/clients/updte-profile-client/updte-profile-client.component';
+import { ResstPasswordComponent } from './views/clients/resst-password/resst-password.component';
+import { UpdateProfileChauffeurComponent } from './views/chauffeurs/update-profile-chauffeur/update-profile-chauffeur.component';
+import { AddPaiementComponent } from './views/clients/add-paiement/add-paiement.component';
+import { SettingsComponent } from './views/admin/settings/settings.component';
 
 @NgModule({
   declarations: [
@@ -67,8 +73,14 @@ import { environment } from 'src/environments/environment';
     BlogComponent,
     AddblogComponent,
     ListPostComponent,
+    ResstPasswordComponent,
     ListTypevehiculeComponent,
     NotifiComponent,
+    UpdateProfileAdminComponent,
+    UpdteProfileClientComponent,
+    UpdateProfileChauffeurComponent,
+    AddPaiementComponent,
+    SettingsComponent,
 
   ],
   imports: [

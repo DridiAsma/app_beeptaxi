@@ -39,7 +39,7 @@ const routes: Routes = [
   {path:'allcodepromo',loadChildren:()=>import('./views/admin/allcodepromo/allcodepromo.module').then(m=>m.AllcodepromoModule)},
   {path:'typevehicle',loadChildren:()=>import('./views/admin/typevehicle/typevehicle.module').then(m=>m.TypevehicleModule)},
   {path:'profile',loadChildren:()=>import('./views/admin/profile/profile.module').then(m=>m.ProfileModule)},
-  // {path:'edit/:id',loadChildren:()=>import('./views/admin/editnotif/editnotif.module').then(m=>m.EditnotifModule)},
+  {path:'edit/:id',loadChildren:()=>import('./views/admin/update-profile-admin/update-profile-admin.module').then(m=>m.UpdateProfileAdminModule)},
   {path:'noteStar',loadChildren:()=>import('./views/admin/note-star/note-star.module').then(m=>m.NoteStarModule)},
   {path:'requetClient',loadChildren:()=>import('./views/admin/listerequete-client/listerequete-client.module').then(m=>m.ListerequeteClientModule)},
   {path:'requetChauffeur',loadChildren:()=>import('./views/admin/listerequete-chauffeur/listerequete-chauffeur.module').then(m=>m.ListerequeteChauffeurModule)},
@@ -47,16 +47,19 @@ const routes: Routes = [
   {path:'addblog', loadChildren:()=>import('./views/admin/addblog/addblog.module').then(m=>m.AddblogModule)},
   {path:'listblog', loadChildren:()=>import('./views/admin/list-post/list-post.module').then(m=>m.ListPostModule)},
   {path:'update/:id',loadChildren:()=>import('./views/admin/list-post/update-post/update-post.module').then(m=>m.UpdatePostModule)},
+  {path:'settings',loadChildren:()=>import('./views/admin/settings/settings.module').then(m=>m.SettingsModule)},
  ]},
 
  {path:'client',component:ClientLayoutComponent,
  children:[
  {path:'commande',loadChildren:()=>import('./views/clients/commande/commande.module').then(m=>m.CommandeModule)},
+ {path:'ModifierProfile',loadChildren:()=>import('./views/clients/updte-profile-client/updte-profile-client.module').then(m=>m.UpdteProfileClientModule)},
  ]},
 
  {path:'chauffeur',component:ChauffeurLayoutComponent,
   children:[
     {path:'map',loadChildren:()=>import('./views/chauffeurs/map/map.module').then(m=>m.MapModule)},
+    {path:'modifierProfileChauf',loadChildren:()=>import('./views/chauffeurs/update-profile-chauffeur/update-profile-chauffeur.module').then(m=>m.UpdateProfileChauffeurModule)},
 
   ]},
 
