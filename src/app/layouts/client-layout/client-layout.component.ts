@@ -8,11 +8,19 @@ import { AuthclientService } from 'src/app/views/services/authclient.service';
   styleUrls: ['./client-layout.component.css']
 })
 export class ClientLayoutComponent implements OnInit {
-
-  name: any;
+  name: any ="";
+  email:any ="";
+  isLogged:boolean=false;
+ 
 
   constructor(private clientservice:AuthclientService, private route:Router) {
-    this.name=clientservice.getname()
+    if(localStorage.getItem("token")){
+      this.name=localStorage.getItem("name");
+      this.email=localStorage.getItem("email");
+
+    }else{
+      this.isLogged = false;
+    }
    }
 
   ngOnInit(): void {
@@ -33,6 +41,7 @@ clickEvent2()
 /*unction logout*/
 logout(){
   localStorage.removeItem('token')
+  localStorage.removeItem('email')
   this.route.navigate(['/client/login'])
 }
 

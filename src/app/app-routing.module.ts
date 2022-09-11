@@ -53,12 +53,14 @@ const routes: Routes = [
  {path:'client',component:ClientLayoutComponent,
  children:[
  {path:'commande',loadChildren:()=>import('./views/clients/commande/commande.module').then(m=>m.CommandeModule)},
+ {path:'profileclient',loadChildren:()=>import('./views/clients/profile-client/profile-client.module').then(m=>m.ProfileClientModule)},
  {path:'ModifierProfile',loadChildren:()=>import('./views/clients/updte-profile-client/updte-profile-client.module').then(m=>m.UpdteProfileClientModule)},
  ]},
 
  {path:'chauffeur',component:ChauffeurLayoutComponent,
   children:[
     {path:'map',loadChildren:()=>import('./views/chauffeurs/map/map.module').then(m=>m.MapModule)},
+    {path:'profile_chauffeur',loadChildren:()=>import('./views/chauffeurs/profile-chauffeurs/profile-chauffeurs.module').then(m=>m.ProfileChauffeursModule)},
     {path:'modifierProfileChauf',loadChildren:()=>import('./views/chauffeurs/update-profile-chauffeur/update-profile-chauffeur.module').then(m=>m.UpdateProfileChauffeurModule)},
 
   ]},

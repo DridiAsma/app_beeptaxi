@@ -1,30 +1,34 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthadminService } from 'src/app/views/services/authadmin.service';
 
+
+
+export class User {
+  name: any;
+  email: any;
+}
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-  name:any
-  profile: any;
 
-  constructor(private ads:AuthadminService) { 
-    this.name=ads.getname()
+ user!: User;
+
+  constructor(private ads:AuthadminService) {
+
+    this.ads.profileadmin().subscribe((res:any) => {
+      this.user =res;
+    })
   }
 
   ngOnInit(): void {
 
-    this.getprofile();
+
 
   }
 
-  getprofile(){
-    this.ads.profileadmin().subscribe((response:any)=>{
-      console.log(response)
-      this.profile=response;
-    });
-  }
+
 
 }

@@ -9,55 +9,40 @@ export class AuthclientService {
   helper=new JwtHelperService()
   user=''
 
+ 
   constructor(private http:HttpClient) { }
 
   login(data:any){
     return this.http.post('http://127.0.0.1:8000/api/client/login',data);
   }
 
-  saveToken(token:any){
+  // saveToken(token:any){
 
-    //let decodeToken = this.helper.decodeToken(token)
-    localStorage.setItem('token',token)
+  //   //let decodeToken = this.helper.decodeToken(token)
+  //   // localStorage.setItem('token',token);
+  //   // localStorage.setItem('email',email);
 
-    }
+
+  //   }
 
   register(data:any){
     return this.http.post('http://127.0.0.1:8000/api/client/register',data);
   }
 
-//  profile(){
-//   return this.http.get('http://127.0.0.1:8000/api/auth/profile');
-//  }
+ profile(){
+
+  return this.http.get('http://127.0.0.1:8000/api/auth/profile');
+ }
 
 
 
 
-  getname(){
-    let token:any=localStorage.getItem('token')
-    let decodeToken= this.helper.decodeToken(token)
-    return decodeToken.name
-  }
+  // getname(){
+  //   let token:any=localStorage.getItem('token')
+  //   let decodeToken= this.helper.decodeToken(token)
+  //   return decodeToken.name
+  // }
 
 
-  //LoggedIn(){
-    //let token:any=localStorage.getItem('token')
-
-    //if(!token){
-  //   return false
-    //}
-    //let decodeToken=this.helper.decodeToken(token)
-
-
-     //if(decodeToken.user){
-    //   return false
-    // }
-
-     //if(this.helper.isTokenExpired(token)){
-     //  return false
-     //}
-
- //  // return true
-  //}
 
 }

@@ -47,6 +47,11 @@ import { ResstPasswordComponent } from './views/clients/resst-password/resst-pas
 import { UpdateProfileChauffeurComponent } from './views/chauffeurs/update-profile-chauffeur/update-profile-chauffeur.component';
 import { AddPaiementComponent } from './views/clients/add-paiement/add-paiement.component';
 import { SettingsComponent } from './views/admin/settings/settings.component';
+import { ProfileClientComponent } from './views/clients/profile-client/profile-client.component';
+import { ProfileChauffeursComponent } from './views/chauffeurs/profile-chauffeurs/profile-chauffeurs.component';
+import { CoursClientComponent } from './views/clients/cours-client/cours-client.component';
+import { NotificationClientComponent } from './views/clients/notification-client/notification-client.component';
+import { CodePromoClientComponent } from './views/clients/code-promo-client/code-promo-client.component';
 
 @NgModule({
   declarations: [
@@ -81,6 +86,11 @@ import { SettingsComponent } from './views/admin/settings/settings.component';
     UpdateProfileChauffeurComponent,
     AddPaiementComponent,
     SettingsComponent,
+    ProfileClientComponent,
+    ProfileChauffeursComponent,
+    CoursClientComponent,
+    NotificationClientComponent,
+    CodePromoClientComponent,
 
   ],
   imports: [

@@ -1,4 +1,46 @@
 
+<div class="c-sidebar c-sidebar-dark c-sidebar-fixed c-sidebar-lg-show" id="sidebar">
+  <div class="c-sidebar-brand d-lg-down-none">
+   
+  </div>
+  <br><br>
+  <ul class="c-sidebar-nav">
+    <div class="d-flex align-items-center ms-4 mb-4">
+      <div class="position-relative">
+          <img class="rounded-circle" src="assets/admin/img/avatars/6.jpg" alt="" style="width: 40px; height: 40px;">
+          <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
+      </div>
+      <div class="ms-3">
+          <h6 class="mb-0">{{name}}</h6>
+          <span>{{email}}</span>
+      </div>
+   </div>
+    <li class="c-sidebar-nav-item">
+      <a class="c-sidebar-nav-link" routerLink="/client/commande">
+        <svg class="c-sidebar-nav-icon">
+          <use xlink:href="assets/admin/icons/svg/free.svg#cil-speedometer"></use>
+        </svg> Tableau de bord</a>
+    </li>
+
+    <li class="c-sidebar-nav-item">
+      <a class="c-sidebar-nav-link" routerLink="/client/profileclient">
+        <svg class="c-icon mr-2">
+          <use xlink:href="assets/admin/icons/svg/free.svg#cil-user"></use>
+        </svg> Modifier Profile</a>
+    </li>
+
+        <li class="c-sidebar-nav-item">
+            <a class="c-sidebar-nav-link" (click)="logout()">
+              <svg class="c-icon mr-2">
+                <use xlink:href="assets/admin/icons/svg/free.svg#cil-account-logout"></use>
+                </svg>Déconnexion </a>
+        </li>
+
+  </ul>
+  <button class="c-sidebar-minimizer c-class-toggler" type="button" data-target="_parent"
+    data-class="c-sidebar-minimized"></button> 
+</div>
+
 <div class="c-wrapper c-fixed-components">
   <header class="c-header c-header-light c-header-fixed c-header-with-subheader">
          <button class="c-header-toggler c-class-toggler d-lg-none mfe-auto" type="button" data-target="#sidebar" data-class="c-sidebar-show">
@@ -13,22 +55,26 @@
    </button>
          <ul class="c-header-nav d-md-down-none">
              <li class="c-header-nav-item px-3"><a class="c-header-nav-link" href="#">Menu</a></li>
-
          </ul>
-         <ul class="c-header-nav ml-auto mr-4">
+         <!-- <ul class="c-header-nav ml-auto mr-4">
              <li class="c-header-nav-item dropdown">
                  <a class="c-header-nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                      <div class="c-avatar"><img class="c-avatar-img" src="assets/admin/img/avatars/6.jpg"></div>
+                
                  </a>
                  <div class="dropdown-menu dropdown-menu-right pt-0">
                      <div class="dropdown-header bg-light py-2"><strong>Compte</strong></div>
+                     <a class="dropdown-item" routerLink="/client/profileclient">
+                      <svg class="c-icon mr-2">
+                        <use xlink:href="assets/admin/icons/svg/free.svg#cil-user"></use>
+                      </svg>Profil Admin</a>
                      <a class="dropdown-item" (click)="logout()">
                          <svg class="c-icon mr-2">
    <use xlink:href="assets/admin/icons/svg/free.svg#cil-account-logout"></use>
    </svg>Déconnexion</a>
                  </div>
              </li>
-         </ul>
+         </ul> -->
 
          </header>
  <div class="c-body">

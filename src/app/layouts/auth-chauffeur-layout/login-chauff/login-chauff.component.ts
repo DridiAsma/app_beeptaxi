@@ -27,7 +27,7 @@ export class LoginChauffComponent implements OnInit {
      this.chaufservice.login(data).subscribe(data=>{
       this.reponsetoken= data
       this.toastr.success("Saved successfully", "Success")
-      this.chaufservice.enrgisterToken(this.reponsetoken.tokens)
+      // this.chaufservice.enrgisterToken(this.reponsetoken.tokens)
       this.route.navigate(['chauffeur/map'])
 
    },(err:HttpErrorResponse)=>{

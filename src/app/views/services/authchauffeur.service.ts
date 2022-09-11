@@ -7,15 +7,18 @@ import { JwtHelperService } from '@auth0/angular-jwt';
 })
 export class AuthchauffeurService {
   helper=new JwtHelperService()
+  user=''
+
+
   constructor(private http:HttpClient) { }
 
   login(data:any){
     return this.http.post('http://127.0.0.1:8000/api/chauffeur/login',data);
   }
 
-  enrgisterToken(tokens:any){
-    localStorage.setItem('tokens',tokens)
-    }
+  // enrgisterToken(tokens:any){
+  //   localStorage.setItem('tokens',tokens)
+  //   }
 
   register(data:any){
     return this.http.post('http://127.0.0.1:8000/api/chauffeur/register',data);
