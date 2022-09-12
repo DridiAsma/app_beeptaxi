@@ -31,6 +31,7 @@
     "firebase-tools": "^11.8.0",
     "http-server": "^14.1.1",
     "jquery": "^3.6.1",
+    "ng-snotify": "^9.0.1",
     "ngx-bootstrap-icons": "^1.9.1",
     "ngx-google-places-autocomplete": "^2.0.5",
     "ngx-toastr": "^15.0.0",
