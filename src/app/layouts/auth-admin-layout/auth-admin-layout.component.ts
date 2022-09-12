@@ -12,36 +12,34 @@ export class AuthAdminLayoutComponent implements OnInit {
   url: any;
   messageAuthError: any
 
-  constructor(private ads:AuthadminService,
-    private route:Router,
-    private arouter:ActivatedRoute) {
+  constructor(private ads: AuthadminService,
+    private route: Router,
+    private arouter: ActivatedRoute) {
 
 
     //cette fonction return la page admin sont login
 
-    if(this.ads.LoggedIn()==true){
+    if (this.ads.LoggedIn() == true) {
       this.route.navigate(['/admin/dashboard'])
-  }
+    }
 
   }
 
   ngOnInit(): void {
-    this.url=this.arouter.snapshot.queryParams['returnUrl'] || '/admin/dashboard'
+    this.url = this.arouter.snapshot.queryParams['returnUrl'] || '/admin/dashboard'
     console.log(this.url)
   }
 
-  loginadmin(f:any){
-    let data=f.value
+  loginadmin(f: any) {
+    let data = f.value
 
-   this.ads.login(data).subscribe(response=>
+    this.ads.login(data).subscribe(response => {
+      this.dataReceived = response
+      this.ads.saveData(this.dataReceived.access_token)
+      this.route.navigate([this.url])
 
-   {
-    this.dataReceived=response
-    this.ads.saveData(this.dataReceived.access_token)
-    this.route.navigate([this.url])
-
-   },err=>this.messageAuthError="Désactive email ou mot de passe"
-   )
+    }, err => this.messageAuthError = "Désactive email ou mot de passe"
+    )
   }
 
 }

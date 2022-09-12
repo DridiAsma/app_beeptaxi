@@ -106,33 +106,38 @@
         </div>
       </div>
     </div>
-    <br><br><br><br>
+    <br><br>
     <div class="col-lg-5">
+      <!-- <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Distance </span>
+          <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" [value]="distance">
+          <span class="input-group-text">Duree </span>
+        </div>
+        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" [value]="time">
+      </div> -->
       <div class="ride-box">
         <div class="row">
           <div class="col-lg-12">
             <div class="center">
-              <br><br>
+            
               <div class="info-field">
-                <div class="input-group">
+                <div class="input-group mb-3">
                   <div class="input-group-prepend">
-                    <span class="input-group-text" id="">Distance : {{distance}}</span>
+                    <span class="input-group-text">Distance </span>
+                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" [value]="distance">
+                    <span class="input-group-text">Duree </span>
                   </div>
-                  <br>
-                  <div class="input-group-prepend">
-                    <span class="input-group-text" id="">Duree : {{time}}</span>
-                  </div>
-                  <!-- <div class="input-group-prepend">
-                    <span class="input-group-text" id="">source : {{destination}}</span>
-                  </div> -->
+                  <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" [value]="time">
                 </div>
               </div>
             </div>
           </div>
-          <br><br><br><br><br>
+          <br><br><br>
           <div class="input-box">
-            <div #map id="map-canvas" style="width: 120%; height: 900px; z-index: 0;"> </div>
 
+             <div #map id="map-canvas" style="width: 120%; height: 900px; z-index: 0;"> </div>
+          
           </div>
         </div>
       </div>

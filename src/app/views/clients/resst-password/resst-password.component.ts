@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthclientService } from '../../services/authclient.service';
 
 @Component({
   selector: 'app-resst-password',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResstPasswordComponent implements OnInit {
 
-  constructor() { }
 
+
+
+
+  constructor( ) { }
   ngOnInit(): void {
   }
 
+
+
+  
 }

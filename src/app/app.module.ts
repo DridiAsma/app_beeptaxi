@@ -52,6 +52,7 @@ import { ProfileChauffeursComponent } from './views/chauffeurs/profile-chauffeur
 import { CoursClientComponent } from './views/clients/cours-client/cours-client.component';
 import { NotificationClientComponent } from './views/clients/notification-client/notification-client.component';
 import { CodePromoClientComponent } from './views/clients/code-promo-client/code-promo-client.component';
+import { ForgetPassClientComponent } from './views/clients/forget-pass-client/forget-pass-client.component';
 
 @NgModule({
   declarations: [
@@ -91,6 +92,7 @@ import { CodePromoClientComponent } from './views/clients/code-promo-client/code
     CoursClientComponent,
     NotificationClientComponent,
     CodePromoClientComponent,
+    ForgetPassClientComponent,
 
   ],
   imports: [

@@ -9,7 +9,7 @@ export class AuthclientService {
   helper=new JwtHelperService()
   user=''
 
- 
+
   constructor(private http:HttpClient) { }
 
   login(data:any){
@@ -31,11 +31,8 @@ export class AuthclientService {
 
  profile(){
 
-  return this.http.get('http://127.0.0.1:8000/api/auth/profile');
+  return this.http.get('http://127.0.0.1:8000/api/client/profile');
  }
-
-
-
 
   // getname(){
   //   let token:any=localStorage.getItem('token')
@@ -43,6 +40,20 @@ export class AuthclientService {
   //   return decodeToken.name
   // }
 
+  //RestPassword
+  restPass(data:any){
+    return this.http.post('http://127.0.0.1:8000/api/client/resetPassword',data);
+  }
 
 
+  //sendPassword
+  SendPassLink(data:any){
+    return this.http.post('http://127.0.0.1:8000/api/client/sendPasswordResetLink',data);
+  }
+
+
+   //Forget Password
+   forgetPass(data:any){
+    return this.http.post('http://127.0.0.1:8000/api/client/forget_password',data);
+   }
 }
