@@ -1,7 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ResstPasswordComponent } from './resst-password.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+
+  {path:'', component:ResstPasswordComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

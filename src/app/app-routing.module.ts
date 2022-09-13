@@ -61,6 +61,10 @@ const routes: Routes = [
       { path: 'commande', loadChildren: () => import('./views/clients/commande/commande.module').then(m => m.CommandeModule) },
       { path: 'profileclient', loadChildren: () => import('./views/clients/profile-client/profile-client.module').then(m => m.ProfileClientModule) },
       { path: 'ModifierProfile', loadChildren: () => import('./views/clients/updte-profile-client/updte-profile-client.module').then(m => m.UpdteProfileClientModule) },
+      { path: 'historiqueclient', loadChildren: () => import('./views/clients/history-client/history-client.module').then(m => m.HistoryClientModule) },
+      { path: 'payementclient', loadChildren: () => import('./views/clients/add-paiement/add-paiement.module').then(m => m.AddPaiementModule) },
+    
+    
     ]
   },
 
@@ -81,7 +85,7 @@ const routes: Routes = [
   /* Auth client*/
   { path: 'client/login', component: LoginLayoutComponent },
   { path: 'client/inscription', component: InscriptionLayoutComponent },
-  { path: 'client/rest-MotPass', component: ResstPasswordComponent },
+  { path: 'client/response-password-reset', component: ResstPasswordComponent },
   { path: 'client/forget-MotPass', component: ForgetPassClientComponent},
   /* Auth chauffeur*/
   { path: 'chauffeur/login', component: LoginChauffComponent },

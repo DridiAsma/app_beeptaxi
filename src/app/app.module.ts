@@ -53,7 +53,7 @@ import { CoursClientComponent } from './views/clients/cours-client/cours-client.
 import { NotificationClientComponent } from './views/clients/notification-client/notification-client.component';
 import { CodePromoClientComponent } from './views/clients/code-promo-client/code-promo-client.component';
 import { ForgetPassClientComponent } from './views/clients/forget-pass-client/forget-pass-client.component';
-
+import { SnotifyModule, SnotifyService, ToastDefaults } from 'ng-snotify';
 @NgModule({
   declarations: [
     AppComponent,
@@ -111,13 +111,16 @@ import { ForgetPassClientComponent } from './views/clients/forget-pass-client/fo
    GoogleMapsModule,
    GooglePlaceModule,
    ToastrModule.forRoot({timeOut: 5000, positionClass: 'toast-top-right', preventDuplicates: true,}),
-   AngularFireModule.initializeApp(environment.firebase)
+   AngularFireModule.initializeApp(environment.firebase),
+   SnotifyModule
    
 
 
 
   ],
-  providers: [AsyncPipe, MessagingService],
+  providers: [AsyncPipe, MessagingService,
+    { provide: 'SnotifyToastConfig', useValue: ToastDefaults},
+    SnotifyService],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 
