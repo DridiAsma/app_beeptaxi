@@ -25,11 +25,11 @@ export class AuthchauffeurService {
   }
 
   //token login
-  getname(){
-    let tokens:any=localStorage.getItem('tokens')
-    let decodeToken= this.helper.decodeToken(tokens)
-    return decodeToken.name
-  }
+  // getname(){
+  //   let tokens:any=localStorage.getItem('tokens')
+  //   let decodeToken= this.helper.decodeToken(tokens)
+  //   return decodeToken.name
+  // }
 
   //voiture
   getrequeteChauf(){

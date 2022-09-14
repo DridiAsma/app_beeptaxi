@@ -34,9 +34,9 @@
           <a routerLink="/client/forget-MotPass" class="txt2">Mot de passe oublié?</a>
         </div>
 
-        <!--<div class="lert" *ngIf="messageError">
-              {{messageError}}
-      </div>-->
+        <div class="lert" *ngIf=" messageAuthError">
+              {{ messageAuthError}}
+      </div>
 
         <button type="submit" class="btn">Connexion</button>
 

@@ -7,23 +7,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile-client.component.css']
 })
 export class ProfileClientComponent implements OnInit {
+  
   name: any ="";
-  email:any ="";
-  isLogged:boolean=false;
+  email: any ="";
+  prenom: any ="";
+  telephone: any="";
+  isLogged: boolean=false;
 
-  constructor() { 
-    
+  constructor() {
+
     if(localStorage.getItem("token")){
       this.name=localStorage.getItem("name");
+      this.prenom=localStorage.getItem("prenom");
+      this.telephone=localStorage.getItem("telephone");
       this.email=localStorage.getItem("email");
-
     }else{
       this.isLogged = false;
     }
-    
+
   }
 
- 
 
   ngOnInit(): void {}
 

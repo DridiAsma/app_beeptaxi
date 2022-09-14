@@ -9,28 +9,27 @@ import { AuthclientService } from 'src/app/views/services/authclient.service';
 })
 export class ClientLayoutComponent implements OnInit {
   name: any ="";
-  email:any ="";
+  email:  any ="";
   isLogged:boolean=false;
  
 
-  constructor(private clientservice:AuthclientService, private route:Router) {
+  constructor(private clientservice:AuthclientService, private route:Router) 
+  {
     if(localStorage.getItem("token")){
       this.name=localStorage.getItem("name");
       this.email=localStorage.getItem("email");
-
     }else{
       this.isLogged = false;
     }
    }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   status: boolean = false;
   //Sidebar opne
   clickEvent(){
    this.status = true;
-}
+ }
 //Sidebar close
 clickEvent2()
 {
@@ -42,6 +41,9 @@ clickEvent2()
 logout(){
   localStorage.removeItem('token')
   localStorage.removeItem('email')
+  localStorage.removeItem('name')
+  localStorage.removeItem('prenom')
+  localStorage.removeItem('telephone')
   this.route.navigate(['/client/login'])
 }
 

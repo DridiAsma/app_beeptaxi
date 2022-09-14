@@ -68,7 +68,6 @@ export class CommandeComponent implements OnInit {
   ngOnInit(): void {
 
     this.form = this.buildForm(); // for methode ajouter commande
-
     this.ds = new google.maps.DirectionsService();
     this.dr = new google.maps.DirectionsRenderer({
       map: null!,
@@ -156,7 +155,6 @@ export class CommandeComponent implements OnInit {
     this.Latitude = event.geometry.location.lat(),
     this.Longitude = event.geometry.location.lng(),
 
-
     this.source = {
       lat: lat,
       lng: lng
@@ -225,10 +223,7 @@ export class CommandeComponent implements OnInit {
   })
  }
 
- onSubmit(){
-
-  this.saveCommande();
- }
+ onSubmit(){ this.saveCommande(); }
 
  saveCommande(){
   if (this.form.valid) {

@@ -113,7 +113,7 @@ import { SnotifyModule, SnotifyService, ToastDefaults } from 'ng-snotify';
    ToastrModule.forRoot({timeOut: 5000, positionClass: 'toast-top-right', preventDuplicates: true,}),
    AngularFireModule.initializeApp(environment.firebase),
    SnotifyModule
-   
+
 
 
 

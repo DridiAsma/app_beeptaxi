@@ -16,14 +16,16 @@ export class LoginLayoutComponent implements OnInit {
   ngOnInit(): void {}
 
   loginclient(f:any){
-    let data=f.value
-     this.clientservice.login(data).subscribe(data=>{
+    let data = f.value
+     this.clientservice.login(data).subscribe(data =>{
        this.datatoken = data
 
        // this.clientservice.saveToken(this.datatoken.token)
        localStorage.setItem('token',this.datatoken.token);
        localStorage.setItem('email',this.datatoken.user.email);
        localStorage.setItem('name',this.datatoken.user.name);
+       localStorage.setItem('prenom',this.datatoken.user.prenom);
+       localStorage.setItem('telephone',this.datatoken.user.telephone);
       this.route.navigate(['/client/commande'])
    } );
 

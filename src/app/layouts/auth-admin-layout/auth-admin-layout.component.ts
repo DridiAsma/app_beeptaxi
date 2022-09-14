@@ -32,10 +32,9 @@ export class AuthAdminLayoutComponent implements OnInit {
 
   loginadmin(f: any) {
     let data = f.value
-
     this.ads.login(data).subscribe(response => {
       this.dataReceived = response
-      this.ads.saveData(this.dataReceived.access_token)
+      // this.ads.saveData(this.dataReceived.access_token)
       this.route.navigate([this.url])
 
     }, err => this.messageAuthError = "Désactive email ou mot de passe"

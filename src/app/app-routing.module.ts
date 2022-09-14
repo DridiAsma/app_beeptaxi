@@ -63,7 +63,7 @@ const routes: Routes = [
       { path: 'ModifierProfile', loadChildren: () => import('./views/clients/updte-profile-client/updte-profile-client.module').then(m => m.UpdteProfileClientModule) },
       { path: 'historiqueclient', loadChildren: () => import('./views/clients/history-client/history-client.module').then(m => m.HistoryClientModule) },
       { path: 'payementclient', loadChildren: () => import('./views/clients/add-paiement/add-paiement.module').then(m => m.AddPaiementModule) },
-    
+      
     
     ]
   },
