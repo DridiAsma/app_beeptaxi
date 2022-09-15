@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile-client.component.css']
 })
 export class ProfileClientComponent implements OnInit {
-  
+
   name: any ="";
   email: any ="";
   prenom: any ="";

@@ -1,12 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthadminService } from 'src/app/views/services/authadmin.service';
 
-
-
-export class User {
-  name: any;
-  email: any;
-}
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
@@ -14,20 +8,20 @@ export class User {
 })
 export class ProfileComponent implements OnInit {
 
- user!: User;
+ name: any="";
+ email: any="";
+ isLogged: boolean=false;
 
-  constructor(private ads:AuthadminService) {
-
-    this.ads.profileadmin().subscribe((res:any) => {
-      this.user =res;
-    })
+  constructor() {
+if(localStorage.getItem("access_token")){
+  this.email=localStorage.getItem("email");
+  this.name=localStorage.getItem("name");
+}else{
+  this.isLogged = false;
+}
   }
 
-  ngOnInit(): void {
-
-
-
-  }
+  ngOnInit(): void {}
 
 
 

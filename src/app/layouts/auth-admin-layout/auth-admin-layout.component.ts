@@ -20,7 +20,7 @@ export class AuthAdminLayoutComponent implements OnInit {
     //cette fonction return la page admin sont login
 
     if (this.ads.LoggedIn() == true) {
-      this.route.navigate(['/admin/dashboard'])
+      this.route.navigate(['/admin'])
     }
 
   }
@@ -35,9 +35,12 @@ export class AuthAdminLayoutComponent implements OnInit {
     this.ads.login(data).subscribe(response => {
       this.dataReceived = response
       // this.ads.saveData(this.dataReceived.access_token)
+      localStorage.setItem('email', this.dataReceived.user.email);
+      localStorage.setItem('name', this.dataReceived.user.name);
       this.route.navigate([this.url])
 
-    }, err => this.messageAuthError = "Désactive email ou mot de passe"
+    },
+      err => this.messageAuthError = "Désactive email ou mot de passe"
     )
   }
 

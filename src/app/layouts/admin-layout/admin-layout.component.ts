@@ -8,17 +8,12 @@ import { AuthadminService } from 'src/app/views/services/authadmin.service';
   styleUrls: ['./admin-layout.component.css']
 })
 export class AdminLayoutComponent implements OnInit {
-  name:any
 
 
-  constructor(private ads:AuthadminService, private route:Router) {
 
-   this.name=ads.getname()
+  constructor(private ads:AuthadminService, private route:Router) { }
 
-  }
-
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
 
   logout(){

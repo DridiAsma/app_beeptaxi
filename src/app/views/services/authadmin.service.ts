@@ -17,27 +17,29 @@ export class AuthadminService {
     return this.http.post('http://127.0.0.1:8000/api/auth/login',data);
   }
 
- saveData(access_token:any){
+//  saveData(access_token:any){
 
-  //let decodeToken = this.helper.decodeToken(access_token)
-  localStorage.setItem('access_token',access_token)
+//   //let decodeToken = this.helper.decodeToken(access_token)
+//   localStorage.setItem('access_token',access_token)
 
-  }
+//   }
 
-  getname(){
-    let access_token:any =localStorage.getItem('access_token')
+  // getname(){
+  //   let access_token:any =localStorage.getItem('access_token')
 
-    let decodeToken= this.helper.decodeToken(access_token)
-    return decodeToken.name
-  }
+  //   let decodeToken= this.helper.decodeToken(access_token)
+  //   return decodeToken.name
+  // }
 
   LoggedIn(){
     let access_token:any=localStorage.getItem('access_token')
+
 
     if(!access_token){
      return false
     }
     let decodeToken=this.helper.decodeToken(access_token)
+
 
 
      if(decodeToken.user){
@@ -51,10 +53,10 @@ export class AuthadminService {
     return true
   }
 
-  // Remove token
-  removeToken(){
-    localStorage.removeItem('access_token');
-  }
+  // // Remove token
+  // removeToken(){
+  //   localStorage.removeItem('access_token');
+  // }
 
   profileadmin(){
     return this.http.get('http://127.0.0.1:8000/api/auth/profile');
