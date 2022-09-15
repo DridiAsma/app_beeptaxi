@@ -17,12 +17,12 @@ export class AuthadminService {
     return this.http.post('http://127.0.0.1:8000/api/auth/login',data);
   }
 
-//  saveData(access_token:any){
+ saveData(access_token:any){
 
-//   //let decodeToken = this.helper.decodeToken(access_token)
-//   localStorage.setItem('access_token',access_token)
+ let decodeToken = this.helper.decodeToken(access_token)
+  localStorage.setItem('access_token',access_token)
 
-//   }
+  }
 
   // getname(){
   //   let access_token:any =localStorage.getItem('access_token')
