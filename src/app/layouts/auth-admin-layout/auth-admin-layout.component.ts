@@ -26,7 +26,7 @@ export class AuthAdminLayoutComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.url = this.arouter.snapshot.queryParams['returnUrl'] || '/admin/dashboard'
+    this.url = this.arouter.snapshot.queryParams['returnUrl'] || '/admin'
     console.log(this.url)
   }
 
