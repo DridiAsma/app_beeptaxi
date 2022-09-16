@@ -17,16 +17,14 @@ export class ListPostComponent implements OnInit {
     private route:Router,
     private toastr:ToastrService) { }
 
-  ngOnInit(): void {
-    this.getBlog();
-  }
+  ngOnInit(): void { this.getBlog();}
 
 
   //import liste
   getBlog(){
     this.dataServ.indexBlog().subscribe(response=> {
-      this.blogs=response;
       console.log(response)
+      this.blogs=response;
     });
 
   }

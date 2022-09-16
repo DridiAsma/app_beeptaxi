@@ -32,6 +32,7 @@ export class DataService {
  ajouterNotification(data:Notification){
    return this.http.post('http://127.0.0.1:8000/api/notification/create',data);
  }
+
  supNotification(id:any){
   return this.http.delete('http://127.0.0.1:8000/api/notification/delete/'+id);
  }

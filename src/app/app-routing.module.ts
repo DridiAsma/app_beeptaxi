@@ -52,6 +52,7 @@ const routes: Routes = [
       { path: 'listblog', loadChildren: () => import('./views/admin/list-post/list-post.module').then(m => m.ListPostModule) },
       { path: 'update/:id', loadChildren: () => import('./views/admin/list-post/update-post/update-post.module').then(m => m.UpdatePostModule) },
       { path: 'settings', loadChildren: () => import('./views/admin/settings/settings.module').then(m => m.SettingsModule) },
+      { path: 'detaille_chauf/:id', loadChildren: () => import('./views/admin/detailles-chauffeur/detailles-chauffeur.module').then(m => m.DetaillesChauffeurModule) },
     ]
   },
 

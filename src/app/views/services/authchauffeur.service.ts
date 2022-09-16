@@ -36,6 +36,13 @@ export class AuthchauffeurService {
     return this.http.get('http://127.0.0.1:8000/api/revchauf/index');
   }
 
+ editIdChauf(id: number){
+  return this.http.get('http://127.0.0.1:8000/api/chauffeur/editchauf/'+id);
+ }
+
+ detailsch(id: number, data: any){
+  return this.http.post('http://127.0.0.1:8000/api/chauffeur/updatechauf/'+id,data);
+ }
 
   profile(){
     return this.http.get('http://127.0.0.1:8000/api/chauffeur/profile');

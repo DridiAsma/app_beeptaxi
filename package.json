@@ -35,6 +35,7 @@
     "ng-snotify": "^9.0.1",
     "ngx-bootstrap-icons": "^1.9.1",
     "ngx-google-places-autocomplete": "^2.0.5",
+    "ngx-print": "^1.2.1",
     "ngx-toastr": "^15.0.0",
     "rxjs": "~7.5.0",
     "stompjs": "^2.3.3",

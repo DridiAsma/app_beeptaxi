@@ -8,20 +8,20 @@ import { AuthadminService } from 'src/app/views/services/authadmin.service';
 })
 export class ProfileComponent implements OnInit {
 
- name: any="";
- email: any="";
- isLogged: boolean=false;
+  name: any = "";
+  email: any = "";
+  isLogged: boolean = false;
 
   constructor() {
-if(localStorage.getItem("access_token")){
-  this.email=localStorage.getItem("email");
-  this.name=localStorage.getItem("name");
-}else{
-  this.isLogged = false;
-}
+    if (localStorage.getItem("access_token")) {
+      this.email = localStorage.getItem("email");
+      this.name = localStorage.getItem("name");
+    } else {
+      this.isLogged = false;
+    }
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
 
 

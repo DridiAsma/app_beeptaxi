@@ -52,12 +52,11 @@ export class AddblogComponent implements OnInit {
 
     this.dataserv.ajouterblog(formData).subscribe(res => {
       this.data = res;
-
       console.log(this.data);
       this.toastr.success("Saved successfully", "Success");
       this.route.navigate(['/admin/listblog'])
     },
-    (errorRes : HttpErrorResponse) =>{
+    ( errorRes : HttpErrorResponse) =>{
       this.toastr.error("Something went wrong", "Error");
      },
 

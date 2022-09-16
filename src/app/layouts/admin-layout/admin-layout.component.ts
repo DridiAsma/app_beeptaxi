@@ -18,6 +18,8 @@ export class AdminLayoutComponent implements OnInit {
 
   logout(){
     localStorage.removeItem('access_token')
+    localStorage.removeItem('name')
+    localStorage.removeItem('email')
     this.route.navigate(['/admin/login'])
   }
 

@@ -34,7 +34,8 @@ export class AuthAdminLayoutComponent implements OnInit {
     let data = f.value
     this.ads.login(data).subscribe(response => {
       this.dataReceived = response
-      this.ads.saveData(this.dataReceived.access_token)
+      // this.ads.saveData(this.dataReceived.access_token)
+      localStorage.setItem('access_token', this.dataReceived.access_token);
       localStorage.setItem('email', this.dataReceived.user.email);
       localStorage.setItem('name', this.dataReceived.user.name);
       this.route.navigate([this.url])

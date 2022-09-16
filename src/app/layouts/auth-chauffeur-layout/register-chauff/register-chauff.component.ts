@@ -65,7 +65,7 @@ export class RegisterChauffComponent implements OnInit {
       imageCartCir: ["", Validators.required],
       numCartCir: ["", Validators.required],
       dateCartCir: ["", Validators.required],
-    })
+    });
   }
 
   submit() {

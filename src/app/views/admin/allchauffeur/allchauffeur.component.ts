@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { DataService } from '../../services/data.service';
 
 @Component({
@@ -10,8 +11,9 @@ export class AllchauffeurComponent implements OnInit {
 
   imageDirectoryPath:any = 'http://127.0.0.1:8000/uploads/flutterimgs/';  ///for image
 
-  public chauffeurs: any[] | undefined;
-  constructor(private ds:DataService) {}
+  public chauffeurs: any ;
+  constructor(private ds:DataService,
+    private route:Router) {}
 
   ngOnInit(): void {
     this.getChauffeurData();
@@ -19,9 +21,14 @@ export class AllchauffeurComponent implements OnInit {
 
   getChauffeurData(){
     this.ds.getAllchauffeur().subscribe((response:any)=>{
-      console.log(response.data)
-      this.chauffeurs=response.data;
+      console.log(response)
+      this.chauffeurs=response;
     });
   }
 
+
+
+  details(id:any){
+    this.route.navigate(['/admin/detaille_chauf/'+id]);
+  }
 }

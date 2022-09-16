@@ -54,6 +54,7 @@ import { NotificationClientComponent } from './views/clients/notification-client
 import { CodePromoClientComponent } from './views/clients/code-promo-client/code-promo-client.component';
 import { ForgetPassClientComponent } from './views/clients/forget-pass-client/forget-pass-client.component';
 import { SnotifyModule, SnotifyService, ToastDefaults } from 'ng-snotify';
+import { DetaillesChauffeurComponent } from './views/admin/detailles-chauffeur/detailles-chauffeur.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -93,6 +94,7 @@ import { SnotifyModule, SnotifyService, ToastDefaults } from 'ng-snotify';
     NotificationClientComponent,
     CodePromoClientComponent,
     ForgetPassClientComponent,
+    DetaillesChauffeurComponent,
 
   ],
   imports: [
